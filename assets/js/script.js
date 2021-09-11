@@ -5,6 +5,7 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 })
 
 $(document).ready(function () {
+    // Loop used to create a list of the character on the API
     for (let i = 1; i < 732; i++) {
         $.ajax({
             type: "GET",
@@ -16,22 +17,24 @@ $(document).ready(function () {
         });
     }
 
+    // method used to launch the search through the API
     $("#form").submit(function (e) {
-
+        
         e.preventDefault();
         const sp_number = $("#sp_number");
-        const idSH = sp_number.val()
+        const idSH = sp_number.val() //value used to determine what character will be displayed
         let stringValidation = /[a-zA-Z]/gim;
-        if (idSH == stringValidation || idSH > 731 || idSH < 1) {
+        if (idSH == stringValidation || idSH > 731 || idSH < 1) { 
             alert(`El numero ingresado (${idSH}) no está dentro del rango especificado, intentelo de nuevo.`)
-        } else {
+        } else { //
             $.ajax({
                 type: "GET",
                 dataType: "json",
-                url: `https://superheroapi.com/api.php/10225865940492837/${idSH}`,
+                url: `https://superheroapi.com/api.php/10225865940492837/${idSH}`, //this url will be used to retrieve an array
 
                 success: function (datos) {
 
+                    // POWERSTATS
                     let {
                         'intelligence': int
                     } = datos.powerstats;

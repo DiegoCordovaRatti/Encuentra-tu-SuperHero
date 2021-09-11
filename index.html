@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="">
     <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
     <!-- GoogleFonts -->
 
     <!--BOOTSTRAP-->
@@ -17,8 +17,6 @@
     <!-- titulo -->
     <title>SuperHero</title>
 </head>
-
-
 
 <body>
     <!------------------- NAVBAR ---------------------->
@@ -31,8 +29,6 @@
         </div>
     </nav>
 
-
-
     <!------------------- HEADER ---------------------->
     <header>
         <div class="header-container d-flex flex-column align-content-center">
@@ -41,8 +37,10 @@
                 <h2 class="header-search__title my-3">Encuentra tu SuperHero</h2>
                 <form id="form" class="d-flex flex-column">
                     <label class="my-3">Ingresa el número del SuperHero a buscar</label>
+                    <!-- Value used to search through the API -->
                     <input id="sp_number" type="number" class="my-3" style="width: auto;">
                     <div class="d-flex">
+                        <!-- Button used to launch the search through the API -->
                         <button id="submit" type="submit" class="btn btn-danger me-2" style="width: 80px;"
                             data-bs-toggle="tooltip" data-bs-placement="top"
                             title="Ingresa un numero entre 1 y 731">Buscar</button>
@@ -60,6 +58,7 @@
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="exampleModalLabel">Lista de personajes</h5>
                                 </div>
+                                <!-- div that contains the list of every character on the API -->
                                 <div id="superList" class="modal-body">
                                     
                                 </div>
@@ -76,6 +75,7 @@
     </header>
 
     <!------------------- ARTICLE ---------------------->
+    <!-- Tag that the information requested from the API will be displayed on -->
     <article id="summary">
     </article>
 
