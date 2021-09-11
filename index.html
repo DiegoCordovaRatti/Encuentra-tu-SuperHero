@@ -36,38 +36,14 @@
             <div class="header-search w-75 align-self-center">
                 <h2 class="header-search__title my-3">Encuentra tu SuperHero</h2>
                 <form id="form" class="d-flex flex-column">
-                    <label class="my-3">Ingresa el número del SuperHero a buscar</label>
+                    <label class="my-3">Ingresa el <a href="https://www.superheroapi.com/ids.html" target="_blank" style="color: inherit;">número del SuperHero</a> a buscar</label>
                     <!-- Value used to search through the API -->
                     <input id="sp_number" type="number" class="my-3" style="width: auto;">
                     <div class="d-flex">
                         <!-- Button used to launch the search through the API -->
-                        <button id="submit" type="submit" class="btn btn-danger me-2" style="width: 80px;"
+                        <button id="submit" type="submit" class="btn btn-danger" style="width: 80px;"
                             data-bs-toggle="tooltip" data-bs-placement="top"
                             title="Ingresa un numero entre 1 y 731">Buscar</button>
-                        <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            Lista de personajes
-                        </button>
-                    </div>
-
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-scrollable">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Lista de personajes</h5>
-                                </div>
-                                <!-- div that contains the list of every character on the API -->
-                                <div id="superList" class="modal-body">
-                                    
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-danger"
-                                        data-bs-dismiss="modal">Cerrar</button>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </form>
             </div>
@@ -75,7 +51,7 @@
     </header>
 
     <!------------------- ARTICLE ---------------------->
-    <!-- Tag that the information requested from the API will be displayed on -->
+    <!-- Tag that the information requested from the API will be displayed -->
     <article id="summary">
     </article>
 

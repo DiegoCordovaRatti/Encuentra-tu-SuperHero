@@ -5,18 +5,6 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 })
 
 $(document).ready(function () {
-    // Loop used to create a list of the character on the API
-    for (let i = 1; i < 732; i++) {
-        $.ajax({
-            type: "GET",
-            dataType: "json",
-            url: `https://superheroapi.com/api.php/10225865940492837/${i}`,
-            success: function (datos) {
-                $("#superList").append(`<p><strong>${i}</strong>: <i>${datos.name}</i> </p>`);
-            }
-        });
-    }
-
     // method used to launch the search through the API
     $("#form").submit(function (e) {
         
